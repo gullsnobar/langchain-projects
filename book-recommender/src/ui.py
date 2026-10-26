@@ -530,7 +530,16 @@ def _make_setter(text):
     return _setter
 
 
-with gr.Blocks(title="Semantic Book Recommender") as demo:
+# Gradio 6 moved `css` / `head` from gr.Blocks() to launch(); Gradio 4/5 take
+# them on gr.Blocks(). Handle both so the styling always applies.
+_GRADIO_MAJOR = int(gr.__version__.split(".")[0])
+_blocks_kwargs = {"title": "Semantic Book Recommender"}
+if _GRADIO_MAJOR < 6:
+    _blocks_kwargs.update(css=CSS, head=HEAD)
+
+demo = gr.Blocks(**_blocks_kwargs)
+
+with demo:
     gr.HTML(
         """
         <div class="topbar anim-in">
@@ -583,6 +592,19 @@ with gr.Blocks(title="Semantic Book Recommender") as demo:
             outputs=output_html,
             show_progress="hidden",
         )
+
+
+if _GRADIO_MAJOR >= 6:
+    # Inject the styling into launch() so it works even when another file
+    # (e.g. app.py) simply calls demo.launch().
+    _original_launch = demo.launch
+
+    def _launch_with_style(*args, **kwargs):
+        kwargs.setdefault("css", CSS)
+        kwargs.setdefault("head", HEAD)
+        return _original_launch(*args, **kwargs)
+
+    demo.launch = _launch_with_style
 
 
 if __name__ == "__main__":
