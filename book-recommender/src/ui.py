@@ -530,7 +530,7 @@ def _make_setter(text):
     return _setter
 
 
-with gr.Blocks(title="Semantic Book Recommender", css=CSS, head=HEAD) as demo:
+with gr.Blocks(title="Semantic Book Recommender") as demo:
     gr.HTML(
         """
         <div class="topbar anim-in">
