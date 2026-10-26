@@ -1,0 +1,18 @@
+Artificial Intelligence and Modern Technology
+
+Artificial Intelligence (AI) is a branch of computer science focused on developing systems capable of performing tasks that normally require human intelligence. These tasks include understanding natural language, recognizing images, solving problems, making decisions, and learning from data. AI is widely used in industries such as healthcare, education, finance, transportation, and software development. For example, healthcare organizations use AI to assist in analyzing medical images, while e-commerce platforms use recommendation systems to suggest products based on customer preferences.
+
+
+Machine Learning and Deep Learning
+
+Machine Learning (ML) is a subset of Artificial Intelligence that enables computers to identify patterns and learn from data without requiring explicit programming for every task. Machine learning algorithms are commonly categorized into supervised learning, unsupervised learning, and reinforcement learning. Supervised learning uses labeled datasets to train models for tasks such as classification and prediction. Unsupervised learning identifies hidden patterns in unlabeled data. Deep Learning is a specialized area of machine learning that uses neural networks with multiple layers to process complex information. Deep learning techniques are widely used in speech recognition, image classification, and natural language processing.
+
+
+Large Language Models and Generative AI
+
+Large Language Models (LLMs) are artificial intelligence models trained on large amounts of text data to understand and generate human-like language. Many modern LLMs use the Transformer architecture, which relies on attention mechanisms to process relationships between tokens. LLMs can perform tasks such as text summarization, translation, question answering, code generation, and content creation. Generative AI refers to artificial intelligence systems capable of generating new content, including text, images, audio, and video. However, language models can sometimes generate inaccurate information, commonly referred to as hallucinations. Developers use techniques such as Retrieval-Augmented Generation to improve the factual grounding of generated responses.
+
+
+Retrieval-Augmented Generation (RAG)
+
+Retrieval-Augmented Generation (RAG) is a technique that combines information retrieval with generative artificial intelligence. Instead of relying entirely on information learned during training, a RAG system retrieves relevant information from external knowledge sources before generating an answer. A typical RAG pipeline includes document loading, text splitting, embedding generation, vector storage, similarity search, and response generation. Documents are divided into smaller pieces called chunks. Each chunk is converted into a numerical representation known as an embedding. These embeddings are stored in a vector database. When a user submits a question, the system retrieves relevant chunks and provides them as context to a language model. This approach can improve answer accuracy and allows applications to use information that was not included in the model's original training data.
