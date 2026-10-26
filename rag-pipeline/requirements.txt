@@ -1,0 +1,9 @@
+langchain
+langchain-ollama
+langchain-community
+langchain-text-splitters
+chromadb
+faiss-cpu
+python-dotenv
+gradio
+langchain-chroma
